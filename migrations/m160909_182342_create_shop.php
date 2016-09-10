@@ -41,8 +41,8 @@ class m160909_182342_create_shop extends Migration
             'is_active' => $this->boolean(),
         ]);
 
-        $this->addForeignKey('products', CategoryProducts::tableName(), 'product_id', Product::tableName(), 'id');
-        $this->addForeignKey('category', CategoryProducts::tableName(), 'category_id', Category::tableName(), 'id');
+        #$this->addForeignKey('products', CategoryProducts::tableName(), 'product_id', Product::tableName(), 'id');
+        #$this->addForeignKey('category', CategoryProducts::tableName(), 'category_id', Category::tableName(), 'id');
 
         $this->createTable(Customer::tableName(),[
             'id' => $this->primaryKey(),
@@ -65,7 +65,7 @@ class m160909_182342_create_shop extends Migration
         ]);
 
         $this->createIndex('order_id', Order::tableName(), 'order_id', true);
-        $this->addForeignKey('customer', Order::tableName(), 'customer_id', Customer::tableName(), 'id');
+        #$this->addForeignKey('customer', Order::tableName(), 'customer_id', Customer::tableName(), 'id');
 
         $this->createTable(OrderProducts::tableName(),[
             'id' => $this->primaryKey(),
@@ -77,8 +77,8 @@ class m160909_182342_create_shop extends Migration
             'modification_date' => $this->dateTime(),
         ]);
 
-        $this->addForeignKey('products', OrderProducts::tableName(), 'product_id', Product::tableName(), 'id');
-        $this->addForeignKey('order', OrderProducts::tableName(), 'order_id', Order::tableName(), 'id');
+        #$this->addForeignKey('products', OrderProducts::tableName(), 'product_id', Product::tableName(), 'id');
+        #$this->addForeignKey('order', OrderProducts::tableName(), 'order_id', Order::tableName(), 'id');
     }
 
     public function safeDown()
