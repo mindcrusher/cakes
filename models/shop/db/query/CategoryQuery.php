@@ -9,14 +9,14 @@
 namespace app\models\shop\db\query;
 
 
-use app\models\shop\db\Product;
+use app\models\shop\db\Category;
 use yii\db\ActiveQuery;
 
-class ProductQuery extends ActiveQuery
+class CategoryQuery extends ActiveQuery
 {
     public function init()
     {
-        $this->from(['product' => Product::tableName()]);
+        $this->from(['category' => Category::tableName()]);
         parent::init();
     }
 }

@@ -10,6 +10,7 @@ namespace app\models\shop\db;
 
 
 use app\components\linkable\Linkable;
+use app\models\shop\db\query\CategoryQuery;
 use yii\db\ActiveRecord;
 
 /**
@@ -26,6 +27,11 @@ class Category extends ActiveRecord implements Linkable
     public static function tableName()
     {
         return 'shop_category';
+    }
+
+    public static function find()
+    {
+        return new CategoryQuery(get_called_class());
     }
 
     public function getProducts()
