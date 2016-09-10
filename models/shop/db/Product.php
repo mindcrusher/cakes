@@ -11,6 +11,7 @@ namespace app\models\shop\db;
 
 use app\components\linkable\Linkable;
 use yii\db\ActiveRecord;
+use app\models\shop\db\query\ProductQuery;
 
 /** @property integer $id */
 
@@ -26,6 +27,11 @@ class Product extends ActiveRecord  implements Linkable
     public static function tableName()
     {
         return 'shop_product';
+    }
+
+    public static function find()
+    {
+        return new ProductQuery(get_called_class());
     }
 
     public function getPhoto()
