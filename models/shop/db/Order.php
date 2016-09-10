@@ -28,7 +28,7 @@ class Order extends ActiveRecord
 {
     public static function tableName()
     {
-        return 'shop.orders';
+        return 'shop_orders';
     }
 
     public function amount()

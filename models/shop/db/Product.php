@@ -25,7 +25,7 @@ class Product extends ActiveRecord  implements Linkable
 {
     public static function tableName()
     {
-        return 'shop.product';
+        return 'shop_product';
     }
 
     public function getPhoto()

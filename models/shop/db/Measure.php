@@ -28,7 +28,7 @@ class Measure extends ActiveRecord
 
     public static function tableName()
     {
-        return 'shop.measure';
+        return 'shop_measure';
     }
 
     public function ignoreQuantity()

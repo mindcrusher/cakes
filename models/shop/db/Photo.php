@@ -21,7 +21,7 @@ class Photo extends ActiveRecord
 {
     public static function tableName()
     {
-        return 'shop.photo';
+        return 'shop_photo';
     }
 
     public function isActive()

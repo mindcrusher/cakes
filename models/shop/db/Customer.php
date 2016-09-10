@@ -28,7 +28,7 @@ class Customer extends ActiveRecord
 {
     public static function tableName()
     {
-        return 'shop.customers';
+        return 'shop_customers';
     }
 
     /**

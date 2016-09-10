@@ -23,6 +23,6 @@ class ProductPhotos extends ActiveRecord
 {
     public static function tableName()
     {
-        return 'shop.product_photos';
+        return 'shop_product_photos';
     }
 }

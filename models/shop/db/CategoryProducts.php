@@ -15,6 +15,6 @@ class CategoryProducts extends ActiveRecord
 {
     public static function tableName()
     {
-        return 'shop.category_products';
+        return 'shop_category_products';
     }
 }

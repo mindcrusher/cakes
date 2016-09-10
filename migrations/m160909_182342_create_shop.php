@@ -13,7 +13,7 @@ class m160909_182342_create_shop extends Migration
 {
     public function safeUp()
     {
-        $this->execute('CREATE SCHEMA shop');
+        #$this->execute('CREATE SCHEMA shop');
 
         $this->createTable(Category::tableName(),[
             'id' => $this->primaryKey(),
@@ -90,6 +90,6 @@ class m160909_182342_create_shop extends Migration
         $this->dropTable(Category::tableName());
         $this->dropTable(Measure::tableName());
         $this->dropTable(Product::tableName());
-        $this->execute('DROP SCHEMA shop');
+        #$this->execute('DROP SCHEMA shop');
     }
 }

@@ -25,7 +25,7 @@ class Category extends ActiveRecord implements Linkable
 {
     public static function tableName()
     {
-        return 'shop.category';
+        return 'shop_category';
     }
 
     public function getProducts()
